@@ -1,0 +1,42 @@
+{
+  "name": "expo-sms-retriever",
+  "version": "0.1.0",
+  "description": "My new module",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "expo-sms-retriever",
+    "SmsRetriever"
+  ],
+  "repository": "https://github.com/s0ubhik/expo-sms-retriever",
+  "bugs": {
+    "url": "https://github.com/s0ubhik/expo-sms-retriever/issues"
+  },
+  "author": "s0ubhik <soubhik1809@gmail.com> (https://github.com/s0ubhik)",
+  "license": "MIT",
+  "homepage": "https://github.com/s0ubhik/expo-sms-retriever#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.17"
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "react": "*",
+    "react-native": "*"
+  }
+}
