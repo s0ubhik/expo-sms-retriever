@@ -10,11 +10,11 @@ export async function getHash(): Promise<string> {
   return (hash.length > 0) ? hash[0] : '';
 }
 
-export async function start(): Promise<Boolean> {
+export async function start(): Promise<boolean> {
   return await SmsRetrieverModule.start();
 }
 
-export async function stop(): Promise<Boolean> {
+export async function stop(): Promise<boolean> {
   return await SmsRetrieverModule.stop();
 }
 
