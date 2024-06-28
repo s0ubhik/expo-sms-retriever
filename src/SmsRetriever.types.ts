@@ -1,7 +1,5 @@
-export type ChangeEventPayload = {
+export type MessageEventPayload = {
   value: string;
+  otp: string;
 };
 
-export type SmsRetrieverViewProps = {
-  name: string;
-};

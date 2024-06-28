@@ -1,7 +1,7 @@
 {
   "name": "expo-sms-retriever",
   "version": "0.1.0",
-  "description": "My new module",
+  "description": "Native expo SMS retriever module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {

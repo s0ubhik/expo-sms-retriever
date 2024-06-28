@@ -41,3 +41,8 @@ android {
     abortOnError false
   }
 }
+
+dependencies {
+    implementation 'com.google.android.gms:play-services-basement:18.4.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.1.0'
+}
