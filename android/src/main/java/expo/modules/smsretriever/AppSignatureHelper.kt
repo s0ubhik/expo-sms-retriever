@@ -33,19 +33,21 @@ class AppSignatureHelper (private val context: Context){
             }
         }
     }
-
+    
     fun getAppSignatures(): List<String> {
         val appCodes = mutableListOf<String>()
         val packageName = context.packageName
         val packageManager = context.packageManager
         try {
             val signatures = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
-                packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES).signingInfo.apkContentsSigners
+                packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
+                    .signingInfo?.apkContentsSigners
             } else {
                 @Suppress("DEPRECATION")
-                packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES).signatures
+                packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
+                    .signatures
             }
-            signatures.mapNotNullTo(appCodes) { hash(packageName, it.toCharsString()) }
+            signatures?.mapNotNullTo(appCodes) { hash(packageName, it.toCharsString()) }
         } catch (e: PackageManager.NameNotFoundException) {
             Log.e(TAG, "Unable to find package to obtain hash.", e)
         }
